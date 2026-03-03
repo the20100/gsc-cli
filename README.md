@@ -45,7 +45,12 @@ gsc auth setup --client-id <id> --client-secret <secret>
 export GOOGLE_CLIENT_ID=...
 export GOOGLE_CLIENT_SECRET=...
 gsc auth setup
+
+# Option D: remote/VPS — no browser available
+gsc auth setup --credentials /path/to/credentials.json --no-browser
 ```
+
+With `--no-browser`: the CLI prints the OAuth URL. Open it in a local browser, authorize, then copy the full redirect URL from the address bar and paste it into the terminal (the page will fail to load — that's expected).
 
 Config stored at:
 - macOS: `~/Library/Application Support/g-search-console/config.json`
